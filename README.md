@@ -60,3 +60,41 @@ Software Test Engineer → Transitioning into AI & Cybersecurity
 - System design thinking  
 - Real-world problem solving  
 - Ability to apply AI in security workflows  
+- End-to-end SOC pipeline simulation  
+
+---
+
+## 🔬 Demo — End-to-End Flow
+
+### 📥 Sample Input Logs
+```
+Mar 27 10:01:12 Failed password from 192.168.1.105
+Mar 27 10:01:15 Failed password from 192.168.1.105
+Mar 27 10:01:18 Failed password from 192.168.1.105
+```
+👉 Full logs available in: data/sample_logs.txt
+
+---
+
+### 🚨 Detection Output
+```json
+{
+  "event_type": "Brute Force Attack",
+  "source_ip": "192.168.1.105",
+  "severity": "HIGH"
+}
+```
+
+👉 Full output available in: output/detection.json
+
+
+---
+
+### AI Incident Summary
+```
+Brute Force Attack detected from 192.168.1.105
+Severity: CRITICAL
+Recommendation: Block IP and review logs
+
+```
+
