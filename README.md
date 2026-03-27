@@ -97,4 +97,40 @@ Severity: CRITICAL
 Recommendation: Block IP and review logs
 
 ```
+## ▶️ Python Demo
 
+This project also includes a simple Python simulation script:
+
+```bash
+python soc_demo.py
+```
+
+### What it does
+- Reads sample logs from `data/sample_logs.txt`
+- Detects repeated failed SSH login attempts
+- Flags brute force activity based on a threshold
+- Prints an AI-style incident summary
+
+### Example Output
+```text
+Reading logs...
+
+Detected Alerts:
+{'event_type': 'Brute Force Attack', 'source_ip': '192.168.1.105', 'attempt_count': 5, 'severity': 'HIGH'}
+
+Incident Type: Brute Force Attack
+
+Summary:
+Multiple failed SSH login attempts were detected from IP address 192.168.1.105.
+
+Analysis:
+The pattern indicates a brute force attack attempting unauthorized access.
+
+Severity: CRITICAL
+
+Recommended Actions:
+- Block the source IP immediately
+- Review authentication logs
+- Enforce stronger password policies
+- Enable multi-factor authentication
+```
